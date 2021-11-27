@@ -1,8 +1,8 @@
-// DEBUG=* deno run --allow-read --allow-env --allow-net ./examples/demo.js
-import { linebot } from 'https://deno.land/x/linebot/mod.ts'
+// DEBUG=* deno run --allow-read --allow-env --allow-net ./linebot.ts
+import { linebot } from 'https://deno.land/x/linebot@v1.1.0/mod.ts'
 import { opine, json } from 'https://deno.land/x/opine@1.8.0/mod.ts';
 
-const endpointToWebHook = 'https://webhook';
+const endpointToWebHook = 'https://workingpartner-linebot.deno.dev/';
 const options = {
   channelId: Deno.env.get('CHANNEL_ID') || '',
   channelSecret: Deno.env.get('CHANNEL_SECRET') || '',
